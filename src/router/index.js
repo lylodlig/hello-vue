@@ -9,11 +9,23 @@ import test from '@/components/test'
 import Event from '@/components/Event'
 import MyBtn from '@/components/MyBtn'
 import PersonInfo from '@/components/bind/PersonInfo'
+import Clock from '@/components/1_6/Clock'
+import Index from '@/components/1_6/index'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '/',
+      name: 'Index',
+      component: Index
+    },
+    {
+      path: '/',
+      name: 'Clock',
+      component: Clock
+    },
     // {
     //   path: '/',
     //   name: 'PersonInfo',

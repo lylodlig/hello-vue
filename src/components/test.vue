@@ -10,6 +10,8 @@
 
     <PersonInfo v-model="name"></PersonInfo>
     <PersonInfo :phone="name" @change="name=$event.target.value"></PersonInfo>
+
+    <Clock></Clock>
   </div>
 </template>
 
@@ -17,6 +19,7 @@
   import Props from "./Props"
   import Slot from "./Slot"
   import PersonInfo from "./bind/PersonInfo"
+  import Clock from "./1_6/Clock"
 
   export default {
     data() {
@@ -25,7 +28,7 @@
       }
     },
     components: {
-      Props, Slot, PersonInfo
+      Props, Slot, PersonInfo, Clock
     },
     methods: {
       change: function (value) {
