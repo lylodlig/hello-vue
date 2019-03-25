@@ -12,11 +12,13 @@
   <button v-on:click="show = !show">
     Toggle
   </button>
-  <transition name="slide-fade">
-    <p v-if="show" v-on:animationend="animationend" v-on:transitionend="transitionend">hello</p>
+  <transition appear name="slide-fade">
+    <p v-if="show" v-on:animationend="animationend" v-on:transitionend="transitionend">hello1111</p>
+    <p v-else="show" v-on:animationend="animationend" v-on:transitionend="transitionend">hello1112222</p>
+    <!--<h1 v-else>是德国进口过来</h1>-->
   </transition>
 
-  <transition name="bounce">
+  <transition appear name="bounce">
     <p v-if="show">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris facilisis enim libero, at lacinia
       diam fermentum id. Pellentesque habitant morbi tristique senectus et netus.</p>
   </transition>

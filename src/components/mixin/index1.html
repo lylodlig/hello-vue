@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <anchored-heading :level="1">hello world
+  </anchored-heading>
+</div>
+<script>
+  Vue.component('anchored-heading', {
+    render: function (createElement) {
+      console.log(this.$slots)
+      console.log(this.$scopedSlots.default({
+        text: 'this.message'
+      }))
+      return createElement(
+        'h' + this.level,
+        [
+          createElement('a', {
+            attrs: {
+              name: this.$slots.default,
+              href: '#' + this.$slots.default
+            }
+          }, this.$slots.default)
+        ]
+      )
+    },
+    props: {
+      level: {
+        type: Number,
+        required: true
+      }
+    }
+  });
+  new Vue({
+    el: '#app'
+  })
+</script>
+</body>
+</html>
