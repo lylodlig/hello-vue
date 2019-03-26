@@ -11,6 +11,10 @@ import MyBtn from '@/components/MyBtn'
 import PersonInfo from '@/components/bind/PersonInfo'
 import Clock from '@/components/1_6/Clock'
 import Index from '@/components/1_6/index'
+import CustomDirective from '@/components/1_7/CustomDerective'
+import index from '@/components/1_8/index'
+import index10 from '@/components/1_10/index'
+import vuex1 from '@/components/vuex/1_1/vuex1'
 
 Vue.use(Router)
 
@@ -18,24 +22,40 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Index',
-      component: Index
+      name: 'vuex1',
+      component: vuex1
     },
     {
       path: '/',
-      name: 'Clock',
-      component: Clock
+      name: 'Event',
+      component: Event
     },
+    {
+      path: '/',
+      name: 'index10',
+      component: index10
+    },
+    {
+      path: '/',
+      name: 'CustomDirective',
+      component: CustomDirective
+    },
+    {
+      path: '/',
+      name: 'Index',
+      component: Index
+    },
+    // {
+    //   path: '/',
+    //   name: 'Clock',
+    //   component: Clock
+    // },
     // {
     //   path: '/',
     //   name: 'PersonInfo',
     //   component: PersonInfo
     // },
-    // {
-    //   path: '/',
-    //   name: 'Event',
-    //   component: Event
-    // },
+
     {
       path: '/',
       name: 'test',

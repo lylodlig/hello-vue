@@ -9,9 +9,11 @@
       :var1="`hello ${name}`"
       :var2="destroyClock ? 'hello vue' : 'hello world'"
     >
+      <!--var1,var2 就是两个临时变量-->
       <template v-slot="{ var1, var2 }">
         {{ var1 }}
         {{ var2 }}
+        <h1 >{{ var2 }}</h1>
       </template>
     </TempVar>
   </div>

@@ -16,6 +16,7 @@
     name: "Props",
     // props:["name","age"],
     props: {
+      obj:Object,
       name: String,
       list: {
         type: Array,
@@ -45,6 +46,7 @@
     },
     methods: {
       change: function () {
+        this.obj="sfd"
         //直接修改父组件传递的值会报错
         // this.name="fsdf"
         //通过回调来修改

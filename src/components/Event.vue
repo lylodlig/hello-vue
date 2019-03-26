@@ -1,16 +1,27 @@
 <template>
-    <Props :name="'司空见惯'" v-on:click.native="click"></Props>
+  <Props :obj="obj" :name="'司空见惯'" v-on:click.native="click"></Props>
 </template>
 <script>
   import Props from "./Props"
+
   export default {
-    components:{
+    data() {
+      return {
+        obj: {name: "111"}
+      }
+    },
+    components: {
       Props
     },
     methods: {
-      click:function () {
+      click: function () {
+        console.log(this.obj)
         console.log("Event Click")
       }
+    },
+    created() {
+      this.$store.commit('increment')
+      console.log("--------" + this.$store.state.count)
     }
   }
 </script>

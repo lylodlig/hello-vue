@@ -4,14 +4,16 @@
           v-bind:typeMode="'sdsd'"></Props>-->
 
     <!--<Slot :name="name">这是插槽内容</Slot>-->
-    <Slot :name="name" v-slot:default="prop">
-      {{prop.user.name2}}
-    </Slot>
+    <!--<Slot :name="name" v-slot:default="prop">-->
+    <!--{{prop.user.name2}}-->
+    <!--</Slot>-->
 
-    <PersonInfo v-model="name"></PersonInfo>
-    <PersonInfo :phone="name" @change="name=$event.target.value"></PersonInfo>
+    <!--<PersonInfo v-model="name"></PersonInfo>-->
+    <!--<PersonInfo :phone="name" @change="name=$event.target.value"></PersonInfo>-->
 
-    <Clock></Clock>
+    <!--<Clock></Clock>-->
+    <input v-model="name" placeholder="输入">
+    <h1>{{name | capitalize}}</h1>
   </div>
 </template>
 

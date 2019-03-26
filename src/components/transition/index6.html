@@ -46,11 +46,11 @@
       let source = {a: 1, b: 3}
       let assign = Object.assign({}, source);
       let assign2 = Object.assign(target, source);
-      this.outputObj(assign)//{a: 1, b: 3}
-      this.outputObj(source)//{a: 1, b: 3}
+      this.outputObj(assign)//{a: 1_1, b: 3}
+      this.outputObj(source)//{a: 1_1, b: 3}
       console.log("------------")
-      this.outputObj(target)//{a: 1, b: 3, c: 5}
-      this.outputObj(assign2)//{a: 1, b: 3, c: 5}
+      this.outputObj(target)//{a: 1_1, b: 3, c: 5}
+      this.outputObj(assign2)//{a: 1_1, b: 3, c: 5}
     }
     ,
 
