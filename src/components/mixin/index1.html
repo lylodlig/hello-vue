@@ -14,9 +14,7 @@
   Vue.component('anchored-heading', {
     render: function (createElement) {
       console.log(this.$slots)
-      console.log(this.$scopedSlots.default({
-        text: 'this.message'
-      }))
+      console.log(this.$scopedSlots)
       return createElement(
         'h' + this.level,
         [
