@@ -15,15 +15,16 @@ import CustomDirective from '@/components/1_7/CustomDerective'
 import index from '@/components/1_8/index'
 import index10 from '@/components/1_10/index'
 import vuex1 from '@/components/vuex/1_1/vuex1'
+import vuex2 from '@/components/vuex/1_1/vuex2'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'vuex1',
-      component: vuex1
+      path: '/:id',
+      name: 'vuex2',
+      component: vuex2
     },
     {
       path: '/',
