@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <title>Vue 测试实例 </title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <div></div>
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      show: true
+    },
+    created() {
+      let [a, b, c] = [1, 2, 3]//1 2 3
+      let [, , d] = [, , 4] //d=4
+      let [start, ...end] = [1, 2, 3, 4, 5]//start=1,end=[2,3,4,5]
+      //不完全解构
+      // let [x, y] = [1, 2, 3]//x=1,y=2
+
+
+      // let {foo, bar} = {foo: "aaa", bar: {name: "n", age: 12}}
+      //与次序没有关
+      // let {foo, bar} = {bar: "aaa", foo: {name: "n", age: 12}}
+
+      var {foo: baz} = {foo: "aaa", bar: "bbb"}  //baz=aaa,foo,error:foo is not define
+
+      let obj = {
+        p: [
+          'Hello',
+          {y: 'World'}
+        ]
+      }
+
+      let {p: [x, {y}]} = obj  //x=hello y=world
+
+      // console.log("abc:" + a, b, c, d, start, end)
+      // console.log(foo, bar)
+      console.log(x, y)
+    }
+  })
+</script>
+</body>
+</html>
