@@ -21,6 +21,17 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+
+    {
+      path: '/',
+      name: 'test',
+      component: test
+    },
+    {
+      path: '/',
+      name: 'test2',
+      component: test2
+    },
     {
       path: '/:id',
       name: 'vuex2',
@@ -57,11 +68,6 @@ export default new Router({
     //   component: PersonInfo
     // },
 
-    {
-      path: '/',
-      name: 'test',
-      component: test
-    },
     // {
     //   path: '/',
     //   name: 'test4',
@@ -72,11 +78,7 @@ export default new Router({
       name: 'test3',
       component: test3
     },
-    {
-      path: '/',
-      name: 'test2',
-      component: test2
-    },
+
     {
       path: '/',
       name: 'test1',

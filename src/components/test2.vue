@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>{{msg}}</div>
+    <div>{{ms}}</div>
     <div>{{computedMsg}}</div>
     <div>{{computedMsg2}}</div>
     <button v-on:click="changeMsg" style="width: 100px;height: 50px">修改属性</button>
@@ -10,16 +10,18 @@
 </template>
 <script>
   export default {
+    ms:"1",
     data() {
       return {
         msg: "Hello",
+        msg2: "Hello",
         isActive: false,
         hasError: true
       };
     },
     //监听器
     watch: {
-      msg: function () {
+      ms: function () {
         alert("监听到msg发生变化")
       }
     },
@@ -40,7 +42,8 @@
     },
     methods: {
       changeMsg: function () {
-        this.computedMsg2 = "修改后的"
+        // this.computedMsg2 = "修改后的"
+        this.ms = "修改后的"
       }
     }
   };

@@ -3,7 +3,7 @@
     <!--<Props v-bind:name="name" v-bind:changeAtr="change" v-bind:mess="'skjd'"
           v-bind:typeMode="'sdsd'"></Props>-->
 
-    <!--<Slot :name="name">这是插槽内容</Slot>-->
+    <Slot :name="name">这是插槽内容</Slot>
     <!--<Slot :name="name" v-slot:default="prop">-->
     <!--{{prop.user.name2}}-->
     <!--</Slot>-->
@@ -31,6 +31,11 @@
     },
     components: {
       Props, Slot, PersonInfo, Clock
+    },
+    watch:{
+      name:function (newV,oldV) {
+        // console.log(newV,oldV)
+      }
     },
     methods: {
       change: function (value) {
